@@ -74,7 +74,7 @@ function findEmployeeByFirstName(emps, name) {
  for you to use if you need it!
  */
 
-  function allWagesFor() {
+let allWagesFor = function () {
     let eligibleDates = this.timeInEvents.map(function (e) {
         return e.date
     })
