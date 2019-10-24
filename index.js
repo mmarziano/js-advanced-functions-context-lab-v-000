@@ -52,7 +52,7 @@ function wagesEarnedOnDate(date) {
 }
 
 function calculatePayroll(emps) {
-  let allWages = (emps.map(emp => allWagesFor(emp)))
+  let allWages = (emps.map(emp => allWagesFor.call(emp)))
   let sum = allWages.reduce((total, amount) => total + amount); 
 
   return sum;
