@@ -38,6 +38,7 @@ function createTimeOutEvent(time) {
 }
 
 function hoursWorkedOnDate(date) {
+   console.log(this.timeOutEvents)
    let hoursOut = this.timeOutEvents.map(obj => obj.hour/100)
    let hoursIn = this.timeInEvents.map(obj => obj.hour/100)
    let hoursWorked = 0
