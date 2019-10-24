@@ -41,10 +41,11 @@ function hoursWorkedOnDate(date) {
    
    let hoursOut = this.timeOutEvents.find(obj => obj.date === date)
    let hoursIn = this.timeInEvents.find(obj => obj.date === date) 
-   let hoursWorked = 0
-   for (let i = 0; i < hoursOut.length; i++) {
-     hoursWorked = hoursWorked + (hoursOut[i].hour/100 - hoursIn[i].hour/100) 
-   }
+   let hoursWorked = hoursOut - hoursIn;
+  // let hoursWorked = 0
+  // for (let i = 0; i < hoursOut.length; i++) {
+  //   hoursWorked = hoursWorked + (hoursOut[i] - hoursIn[i]) 
+  // }
     return hoursWorked
 }
 
