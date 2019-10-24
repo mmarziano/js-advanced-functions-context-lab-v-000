@@ -81,6 +81,9 @@ let allWagesFor = function () {
     })
 
     let payable = eligibleDates.reduce(function (memo, d) {
+        console.log('memo', memo)
+        console.log('d', d)
+        console.log('this', this)
         return memo + wagesEarnedOnDate.call(this, d)
     }.bind(this), 0) // <== Hm, why did we need to add bind() there? We'll discuss soon!
 
